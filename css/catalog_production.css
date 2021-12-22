@@ -651,27 +651,31 @@ iframe {
   background: rgba(0, 0, 0, 0.82);
 }
 
-.order {
+#modal-order {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
-  background: url("../img/background/bg_modalWindow.png") 170px 100%/300px no-repeat, #b6a0a0;
   border-radius: 5px;
-  max-width: 850px;
   width: 95%;
+  max-height: 100%;
+  max-width: 850px;
+  overflow: auto;
+}
+#modal-order .order {
+  background: url("../img/background/bg_modalWindow.png") 170px 100%/300px no-repeat, #b6a0a0;
   padding: 55px 55px 80px;
 }
-.order .flex {
+#modal-order .flex {
   align-items: start;
 }
-.order .close svg {
+#modal-order .close svg {
   fill: rgba(61, 43, 43, 0.7);
   cursor: pointer;
   transition: 300ms;
 }
-.order .close svg:hover {
+#modal-order .close svg:hover {
   fill: rgba(248, 227, 82, 0.9);
 }
 
@@ -776,6 +780,7 @@ input[type=radio]:focus + label:before {
 }
 .form_right label {
   font-size: 25px;
+  display: block;
 }
 .form_right label input[type=file] {
   display: none;
@@ -813,70 +818,88 @@ input[type=radio]:focus + label:before {
 }
 
 @media all and (max-width: 750px) {
-  .order {
+  #modal-order {
     padding-bottom: 60px;
-    background: url("../img/background/bg_modalWindow.png") 10% 100%/200px no-repeat, #b6a0a0;
   }
-  .order .subtitle {
+  #modal-order .order {
+    background-size: 200px;
+    background-position: 10% 100%;
+  }
+  #modal-order .subtitle {
     font-size: 40px;
     margin: 0;
   }
-  .order span {
+  #modal-order span {
     font-size: 20px;
   }
-  .order .text_description {
+  #modal-order .text_description {
     font-size: 25px;
     margin: 5px 0 30px;
   }
-  .order input, .order textarea {
+  #modal-order input, #modal-order textarea {
     font-size: 20px;
   }
-  .order input::placeholder, .order textarea::placeholder {
+  #modal-order input::placeholder, #modal-order textarea::placeholder {
     font-size: 20px;
   }
-
-  .form_left {
+  #modal-order .form_left {
     width: 50%;
   }
-  .form_left input:not([type=radio]) {
+  #modal-order .form_left input:not([type=radio]) {
     min-width: 100%;
   }
-
-  .block_radio label {
+  #modal-order .block_radio label {
     font-size: 20px;
   }
-
-  .form_right textarea {
+  #modal-order .form_right textarea {
     margin-bottom: 10px;
     height: 178px;
   }
-  .form_right .text {
+  #modal-order .form_right .text {
     font-size: 20px;
   }
-  .form_right label {
+  #modal-order .form_right label {
     font-size: 20px;
   }
-  .form_right label .custom_file {
+  #modal-order .form_right label .custom_file {
     margin: 10px 0 15px auto;
     width: 180px;
     height: 40px;
   }
-  .form_right input[type=submit] {
+  #modal-order .form_right input[type=submit] {
     font-size: 12px;
     padding: 12px 30px;
   }
 }
 @media all and (max-width: 630px) {
-  .order .form {
+  #modal-order .form {
     flex-direction: column;
     align-items: center;
   }
-  .order .form .form_left {
+  #modal-order .form .form_left {
     width: 65%;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
   }
-  .order .form .form_right {
+  #modal-order .form .form_right {
     width: 100%;
+  }
+}
+@media all and (max-width: 475px) {
+  #modal-order .order {
+    padding: 40px 20px 60px;
+    background-size: 160px;
+  }
+  #modal-order .form .form_left {
+    width: 95%;
+  }
+  #modal-order .subtitle {
+    font-size: 35px;
+  }
+  #modal-order .text_description {
+    font-size: 22px;
+  }
+  #modal-order .close svg {
+    width: 25px;
   }
 }
 main {

@@ -1,8 +1,13 @@
 @mixin wMax_750 {
   @media all and (max-width: 750px) {
-    .order {
+
+    #modal-order {
       padding-bottom: 60px;
-      background: url("../img/background/bg_modalWindow.png") 10% 100%/200px no-repeat, #b6a0a0;
+
+      .order {
+        background-size: 200px;
+        background-position: 10% 100%;
+      }
 
       .subtitle {
         font-size: 40px;
@@ -25,47 +30,48 @@
           font-size: 20px;
         }
       }
-    }
 
-    .form_left {
-      width: 50%;
 
-      input:not([type=radio]) {
-        min-width: 100%;
-      }
-    }
+      .form_left {
+        width: 50%;
 
-    .block_radio {
-
-      label {
-        font-size: 20px;
-      }
-    }
-
-    .form_right {
-
-      textarea {
-        margin-bottom: 10px;
-        height: 178px;
-      }
-
-      .text {
-        font-size: 20px;
-      }
-
-      label {
-        font-size: 20px;
-
-        .custom_file {
-          margin: 10px 0 15px auto;
-          width: 180px;
-          height: 40px;
+        input:not([type=radio]) {
+          min-width: 100%;
         }
       }
 
-      input[type=submit] {
-        font-size: 12px;
-        padding: 12px 30px;
+      .block_radio {
+
+        label {
+          font-size: 20px;
+        }
+      }
+
+      .form_right {
+
+        textarea {
+          margin-bottom: 10px;
+          height: 178px;
+        }
+
+        .text {
+          font-size: 20px;
+        }
+
+        label {
+          font-size: 20px;
+
+          .custom_file {
+            margin: 10px 0 15px auto;
+            width: 180px;
+            height: 40px;
+          }
+        }
+
+        input[type=submit] {
+          font-size: 12px;
+          padding: 12px 30px;
+        }
       }
     }
   }
@@ -74,17 +80,46 @@
 @mixin wMax_630 {
   @media all and (max-width: 630px) {
 
-    .order .form {
+    #modal-order .form {
       flex-direction: column;
       align-items: center;
 
       .form_left {
         width: 65%;
-        margin-bottom: 20px;
+        margin: 0 0 20px;
       }
 
       .form_right {
         width: 100%;
+      }
+    }
+  }
+}
+
+@mixin wMax_475 {
+  @media all and (max-width: 475px) {
+
+    #modal-order {
+
+      .order {
+        padding: 40px 20px 60px;
+        background-size: 160px;
+      }
+
+      .form .form_left {
+        width: 95%;
+      }
+
+      .subtitle {
+        font-size: 35px;
+      }
+
+      .text_description {
+        font-size: 22px;
+      }
+
+      .close svg {
+        width: 25px;
       }
     }
   }
