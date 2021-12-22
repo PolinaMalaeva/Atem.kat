@@ -566,7 +566,7 @@
         }
       }
 
-      $width_btn: 138px;
+      $width_btn: 148px;
       $height_btn: 95px;
 
       .btn_case {
@@ -576,6 +576,10 @@
         &:hover .btn {
           width: $width_btn+10px;
           height: $height_btn+10px;
+        }
+
+        .btn {
+          padding: 8px;
         }
       }
 

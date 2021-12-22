@@ -1684,12 +1684,15 @@ header {
     margin-right: 5px;
   }
   .making .btn_case {
-    width: 138px;
+    width: 148px;
     height: 95px;
   }
   .making .btn_case:hover .btn {
-    width: 148px;
+    width: 158px;
     height: 105px;
+  }
+  .making .btn_case .btn {
+    padding: 8px;
   }
   .making .border {
     font-size: 17px;

@@ -1017,6 +1017,9 @@ main {
   .news_block {
     padding: 60px 20px;
   }
+  .news_block .flex .news_picture img {
+    align-self: center;
+  }
 
   .carousel {
     padding: 10px 10px 20px;
