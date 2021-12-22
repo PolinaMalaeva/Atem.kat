@@ -1,0 +1,58 @@
+@mixin wMax_date {
+  @media all and (max-width: 1440px) and (min-width: 550px) {
+
+    .date {
+      color: #fdecec;
+      text-shadow: #382e2e 1px 1px 0, #382e2e -1px -1px 0, #382e2e -1px 1px 0, #382e2e 1px -1px 0;
+    }
+  }
+}
+
+@mixin wMax_for_title {
+  @media all and (max-width: 1000px) and (min-width: 550px) {
+
+    .news {
+
+      .title {
+        color: #fdecec;
+        text-shadow: 1px 1px 10px $color_text;
+      }
+    }
+  }
+}
+
+@mixin wMax_1000 {
+  @media all and (max-width: 1000px) {
+    main {
+      background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.36)), url("../img/background/bg_main-Asuna.png") left 40px/450px fixed no-repeat, url("../img/background/bg_main-Itachi.png") right -68px/320px fixed no-repeat, rgba(255, 215, 215, 0.5);
+    }
+  }
+}
+
+@mixin wMax_550 {
+  @media all and (max-width: 550px) {
+
+    .title {
+      font-size: 45px;
+    }
+
+    .subtitle {
+      font-size: 45px;
+      line-height: 30px;
+      margin-bottom: 15px;
+    }
+
+    .text {
+      font-size: 17px;
+      line-height: 22px;
+
+      span {
+        font-size: 27px;
+      }
+    }
+
+    main {
+      background: rgb(191 150 181 / 24%);
+    }
+  }
+}

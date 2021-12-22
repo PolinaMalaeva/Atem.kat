@@ -1,0 +1,98 @@
+@import "mixin-wMax-same-styles";
+
+.title {
+  font-family: Raleway-Bold;
+  font-size: 55px;
+  line-height: 58px;
+  color: #3d2b2b;
+  max-width: 550px;
+  padding-top: 280px;
+  margin-left: 100px;
+
+  span {
+    background: rgba($color_subtitle, 0.6);
+  }
+}
+
+.subtitle {
+  font-family: Caveat-SemiBold;
+  font-size: 50px;
+  line-height: 50px;
+  color: $color_subtitle;
+  margin-bottom: 25px;
+}
+
+body {
+  font-family: 'Monoton', cursive, "Comfortaa-SemiBold";
+  font-size: 20px;
+  line-height: 25px;
+  color: $color_text;
+}
+
+.text, ul, ol {
+  margin-bottom: 10px;
+}
+
+.text span, ol span, label span {
+  font-family: Caveat-Bold;
+  font-size: 30px;
+  color: $color_span;
+}
+
+ul li, ol li {
+  margin-bottom: 5px;
+}
+
+ul li::marker {
+  color: $color_span;
+}
+
+main {
+  background: url("../img/background/bg_main-Asuna.png") left 40px/450px fixed no-repeat, url("../img/background/bg_main-Itachi.png") right -68px/320px fixed no-repeat, rgba(255, 215, 215, 0.5);
+
+  .embroidery {
+    @include background_shadow(0.9);
+    background: rgb(181 174 168 / 77%);
+
+    p {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+
+.news_block {
+  position: relative;
+  margin: 0 auto;
+  border-radius: 10px;
+  @include background_shadow();
+
+  .subtitle {
+    text-align: center;
+  }
+
+  .sticker {
+    font-family: Caveat-Regular;
+    font-size: 35px;
+    color: #ffffff;
+    background: $color_span;
+    max-width: max-content;
+    padding: 10px 50px;
+    position: absolute;
+    top: 40px;
+    left: -30px;
+  }
+}
+
+.date {
+  font-family: Caveat-Regular;
+  font-size: 25px;
+  max-width: max-content;
+  margin: 5px 0 10px auto;
+}
+
+@include wMax_date;
+@include wMax_1000;
+@include wMax_550;
+

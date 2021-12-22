@@ -1,0 +1,106 @@
+@import "mixin-wMax-header-top";
+
+.wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.header_top {
+  padding: 10px 10px 0 10px;
+  background: rgba(201, 196, 196, 0.5);
+  border-bottom: 1px solid #949191;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: inline-block;
+  position: relative;
+  width: 190px;
+  height: 82px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+
+  .brand {
+    font-family: Celestina-Regular;
+    font-size: 29px;
+    position: absolute;
+    top: 28%;
+    left: 15%;
+    transition: 300ms;
+  }
+
+  &:hover .brand {
+    color: rgba($color_hover, 1);
+  }
+
+  &:hover svg {
+    fill: rgba($color_hover, 1);
+  }
+}
+
+.burger_menu {
+  position: fixed;
+  top: 30px;
+  right: 70px;
+  padding-bottom: 10px;
+  z-index: 5;
+
+  .block_menu {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    border-left: 1px solid #6b6969;
+    background: rgba(255, 255, 255, 0.9);
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    a {
+      min-width: 0;
+      font-family: Caveat-Bold;
+      font-size: 0;
+      line-height: 0;
+      text-transform: uppercase;
+      color: $color_text;
+      visibility: hidden;
+      transition: all 800ms linear, visibility 10ms;
+      display: block;
+
+      &:hover {
+        background: rgba($color_hover, 1);
+      }
+    }
+
+    hr {
+      height: 0;
+      margin: 0;
+      opacity: 1;
+    }
+  }
+
+  &:hover a {
+    min-width: 300px;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 15px 20px;
+    visibility: visible;
+  }
+
+  &:hover hr {
+    width: 50px;
+    height: 1px;
+    background: #6b6969;
+    color: #6b6969;
+  }
+}
+
+@include wMax_1350;
+@include wMax_400;

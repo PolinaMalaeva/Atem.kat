@@ -1,0 +1,176 @@
+@mixin wMax_1285 {
+  @media all and (max-width: 1320px) {
+
+    main .catalog_items {
+      justify-content: center;
+
+      .catalog_item:nth-child(odd) {
+        margin-right: 15px;
+      }
+    }
+
+    main .design {
+      max-width: 800px;
+
+      button {
+        max-width: 25%;
+      }
+    }
+  }
+}
+
+@mixin wMax_915 {
+  @media all and (max-width: 915px) {
+
+    main .catalog .design button {
+      max-width: 25%;
+    }
+
+    main .catalog_items .catalog_item {
+      max-width: 320px;
+
+      img {
+        height: 325px;
+        width: 100%;
+      }
+
+      .size_color {
+        width: 300px;
+        bottom: 24.5%;
+      }
+    }
+  }
+}
+
+@mixin wMax_755 {
+  @media all and (max-width: 755px) {
+
+    main .catalog .design button {
+      max-width: 30%;
+    }
+
+    main .catalog .catalog_item {
+      width: 280px;
+
+      img {
+        width: 100%;
+        height: 285px;
+      }
+
+      .size_color {
+        width: 260px;
+        bottom: 27%;
+        font-size: 18px;
+      }
+
+      .name, p {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@mixin wMax_675 {
+  @media all and (max-width: 675px) {
+
+    main .catalog .design button {
+      max-width: 35%;
+    }
+
+    main .catalog .catalog_item {
+      width: 200px;
+
+      img {
+        width: 100%;
+        height: 205px;
+      }
+
+      .size_color {
+        width: 180px;
+        bottom: 33.5%;
+        font-size: 14px;
+
+        p {
+          font-size: 14px;
+        }
+      }
+
+      .name, p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@mixin wMax_515 {
+  @media all and (max-width: 515px) {
+
+    main .wrap {
+      padding: 0 15px;
+    }
+
+    main .catalog {
+      padding: 80px 20px;
+
+      .subtitle {
+        text-align: center;
+        width: auto;
+        margin-bottom: 30px;
+      }
+
+      .design {
+        flex-direction: column;
+
+        .text {
+          width: 100%;
+          font-size: 15px;
+          margin: 0 0 20px 0;
+          text-align: center;
+        }
+
+        button {
+          max-width: 70%;
+          margin: 0;
+          padding: 15px 20px;
+
+        }
+      }
+
+      .catalog_items {
+        flex-direction: column;
+      }
+
+      .catalog_item {
+        max-width: 280px;
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: 300px;
+        }
+
+        .size_color {
+          width: 260px;
+          bottom: 26%;
+          font-size: 20px;
+
+          p {
+            font-size: 20px;
+          }
+        }
+
+        .name, p {
+          font-size: 22px;
+        }
+
+        &:nth-child(odd) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+

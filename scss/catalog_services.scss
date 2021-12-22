@@ -1,0 +1,140 @@
+@import "fonts";
+@import "variables";
+@import "mixin";
+@import "same-styles";
+@import "header-top";
+@import "catalog_header";
+@import "footer";
+@import "btn-up";
+@import "modalWindow";
+@import "mixin-wMax-services";
+
+main {
+  padding-bottom: 30px;
+
+  .embroidery {
+    padding: 60px 20px;
+
+    button {
+      margin: 20px auto 0;
+      padding: 15px 40px;
+      border-radius: 10px;
+      background: rgb(84, 23, 150);
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      display: block;
+
+      @include hover-block(1, 1);
+    }
+  }
+
+  .subtitle {
+    width: max-content;
+    margin: 30px auto;
+    color: $color_span;
+  }
+
+  .catalog {
+    display: grid;
+    grid-template-areas:
+    "kamado shikamaru naruto obito"
+    "obito_2 shikamaru itadori hinata"
+    "obito_2 satoru satoru satoru"
+    "stich squid_game naruto_2 naruto_2"
+    "darling darling naruto_2 naruto_2";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 305px;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 0 20px;
+
+    div {
+      position: relative;
+      transition: 300ms;
+      box-shadow: 1px 1px 5px black;
+      border-radius: 5px;
+    }
+
+    .kamado {
+      grid-area: kamado;
+
+      @include hover-grid(1);
+    }
+
+    .shikamaru {
+      grid-area: shikamaru;
+
+      @include hover-grid(2);
+    }
+
+    .naruto {
+      grid-area: naruto;
+
+      @include hover-grid(3);
+    }
+
+    .obito {
+      grid-area: obito;
+
+      @include hover-grid(4);
+    }
+
+    .itadori {
+      grid-area: itadori;
+
+      @include hover-grid(5);
+    }
+
+    .hinata {
+      grid-area: hinata;
+
+      @include hover-grid(6);
+    }
+
+    .obito_2 {
+      grid-area: obito_2;
+
+      @include hover-grid(7);
+    }
+
+    .satoru {
+      grid-area: satoru;
+
+      @include hover-grid(8);
+    }
+
+    .stich {
+      grid-area: stich;
+
+      @include hover-grid(9);
+    }
+
+    .squid_game {
+      grid-area: squid_game;
+
+      @include hover-grid(10);
+    }
+
+    .naruto_2 {
+      grid-area: naruto_2;
+
+      @include hover-grid(11);
+    }
+
+    .darling {
+      grid-area: darling;
+
+      @include hover-grid(12);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+  }
+}
+
+
+@include wMax_1300-300;
+@include wMax_for_subtitle;

@@ -1,0 +1,40 @@
+@mixin wMax_1350 {
+  @media all and (max-width: 1350px) {
+
+    .burger_menu {
+      top: 30px;
+      right: 45px;
+    }
+  }
+}
+
+
+@mixin wMax_400 {
+  @media all and (max-width: 400px) {
+
+    header {
+
+      .logo {
+        width: 137px;
+        height: 59px;
+
+        .brand {
+          font-size: 20px;
+        }
+      }
+
+      .burger_menu {
+        top: 19px;
+        right: 25px;
+
+        .block_menu {
+          background: #efe5ec;
+        }
+
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+}

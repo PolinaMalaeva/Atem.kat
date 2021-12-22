@@ -1,0 +1,67 @@
+header {
+  background: url("../img/background/bg_header-other.jpg") top/cover no-repeat;
+}
+
+.header_top {
+  background: rgba(145, 143, 143, 0.52);
+}
+
+.header_bottom {
+
+  .title {
+    width: max-content;
+    padding: 0;
+    margin: 80px auto;
+  }
+}
+
+.menu {
+  background: $color_span;
+
+  .flex {
+    max-width: 1000px;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    div {
+      width: 100%;
+      text-align: center;
+      padding: 15px 0;
+
+      &:last-child {
+        padding-right: 45px;
+      }
+
+      a {
+        color: white;
+
+        @include hover-text();
+      }
+
+      .active {
+        pointer-events: none;
+        cursor: default;
+        color: #b7b7b7;
+      }
+    }
+  }
+}
+
+
+@media all and (max-width: 600px) {
+
+  .header_bottom .title {
+    margin: 50px auto;
+  }
+
+  .menu .flex div {
+
+    &:last-child {
+      padding-right: 20px;
+    }
+
+    a {
+      font-size: 16px;
+    }
+  }
+}

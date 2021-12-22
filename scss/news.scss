@@ -1,0 +1,85 @@
+@import "fonts";
+@import "variables";
+@import "mixin";
+@import "same-styles";
+@import "header-top";
+@import "catalog_header";
+@import "footer";
+@import "btn-up";
+@import "modalWindow";
+@import "mixin-wMax-news";
+
+.header_bottom {
+  padding-bottom: 80px;
+
+  .title {
+    margin-bottom: 0;
+  }
+}
+
+main {
+  padding: 80px 10px;
+}
+
+.carousel {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: hidden;
+
+  .carousel-inner {
+    overflow: visible;
+
+    .carousel-item {
+      transition: transform 800ms ease-in-out;
+    }
+  }
+}
+
+.news_block {
+  padding: 60px 60px;
+
+  .subtitle {
+    max-width: 440px;
+    margin: 0 auto 50px;
+    line-height: 40px;
+  }
+
+  .flex {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: justify;
+  }
+
+  .news_info {
+    width: 100%;
+  }
+
+  .news_picture {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+
+    img {
+      max-width: 300px;
+      box-shadow: 1px 1px 10px $color_text;
+      border-radius: 5px;
+    }
+
+    .img_one {
+      max-width: 100%;
+    }
+
+    .skew {
+      transform: skewY(7deg) scale(-1, 1);
+    }
+
+    .skew-negative {
+      transform: skewY(-7deg);
+    }
+  }
+}
+
+@include wMax_840;
+@include wMax_700;
+@include wMax_405;

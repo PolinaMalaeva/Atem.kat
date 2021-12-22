@@ -1,0 +1,66 @@
+@mixin hover-block($bg_alpha:1, $color_alpha:1) {
+  @if & {
+    & {
+      transition: 300ms;
+    };
+
+    &:hover {
+      background: rgba($color_hover, $bg_alpha);
+      color: rgba($color_text, $color_alpha);
+      box-shadow: 1px 1px 10px $color_text;
+    }
+  }
+}
+
+@mixin hover-text($color_alpha:1) {
+  @if & {
+    & {
+      transition: 300ms;
+    };
+
+    &:hover {
+      color: rgba($color_hover, $color_alpha);
+      font-size: 110%;
+    }
+  }
+}
+
+@mixin background_shadow($bg_alpha:1, $shadow_alpha:1) {
+  background: rgba($color_background, $bg_alpha);
+  box-shadow: 1px 1px 10px rgba($color_text, $shadow_alpha);
+}
+
+@mixin color_circle($color) {
+  display: inline-block;
+  background: $color;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+@mixin hover-grid($number) {
+
+  &:after {
+    opacity: 0;
+    content: "Дизайн №"+$number;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.82);
+    border-radius: 5px;
+    padding: 10px 0 10px 20px;
+    transition: 300ms;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    box-shadow: 1px 1px 10px #4e2f6e;
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
+}

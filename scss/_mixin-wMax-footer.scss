@@ -1,0 +1,106 @@
+@mixin wMax_1230 {
+  @media all and (max-width: 1230px) {
+
+    footer {
+
+      .catalog {
+        display: none;
+      }
+
+      .flex {
+        justify-content: center;
+        text-align: center;
+
+        > div {
+          width: 100%;
+          padding: 10px 20px;
+
+          &:not(:last-child) {
+            margin-right: 15px;
+          }
+        }
+      }
+
+      .contacts_items {
+        width: max-content;
+        margin: 0 auto;
+      }
+
+      form {
+        width: max-content;
+        margin: 20px auto;
+      }
+    }
+  }
+}
+
+
+@mixin wMax_570 {
+  @media all and (max-width: 570px) {
+
+    footer .flex {
+      flex-direction: column-reverse;
+    }
+
+    footer .contacts {
+      overflow: hidden;
+      margin-top: 5px;
+
+      .contacts_items {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        > div {
+          width: 33.333%;
+
+          &:last-child {
+            width: 100%;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 30px;
+
+            a {
+              font-size: 13px;
+            }
+          }
+
+          a {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+
+  .application .text {
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+
+@mixin wMax_500 {
+  @media all and (max-width: 500px) {
+
+    footer .contacts .contacts_items {
+      width: max-content;
+      flex-direction: column;
+
+      svg {
+        display: none;
+      }
+
+      div:not(:last-child) a {
+        font-size: 18px;
+      }
+    }
+
+    .application form input  {
+      min-width: 250px;
+    }
+  }
+}
+
