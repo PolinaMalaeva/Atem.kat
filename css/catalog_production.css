@@ -28,7 +28,7 @@
   line-height: 58px;
   color: #3d2b2b;
   max-width: 550px;
-  padding-top: 280px;
+  padding-top: 330px;
   margin-left: 100px;
 }
 .title span {
@@ -151,9 +151,13 @@ main .embroidery p {
 }
 
 .header_top {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
   padding: 10px 10px 0 10px;
-  background: rgba(201, 196, 196, 0.5);
-  border-bottom: 1px solid #949191;
+  background: rgba(201, 196, 196, 0.75);
+  border-bottom: 1px solid #807e7e;
 }
 
 .flex {
@@ -169,6 +173,7 @@ main .embroidery p {
   height: 82px;
 }
 .logo svg {
+  fill: #3d2b2b;
   width: 100%;
   height: 100%;
   transition: 300ms;
@@ -267,13 +272,13 @@ header {
 }
 
 .header_top {
-  background: rgba(145, 143, 143, 0.52);
+  background: rgba(232, 229, 229, 0.73);
 }
 
 .header_bottom .title {
   width: max-content;
-  padding: 0;
-  margin: 80px auto;
+  padding-top: 150px;
+  margin: 0 auto 80px;
 }
 
 .menu {
@@ -310,7 +315,8 @@ header {
 
 @media all and (max-width: 600px) {
   .header_bottom .title {
-    margin: 50px auto;
+    margin-bottom: 60px;
+    padding-top: 145px;
   }
 
   .menu .flex div:last-child {
@@ -318,6 +324,11 @@ header {
   }
   .menu .flex div a {
     font-size: 16px;
+  }
+}
+@media all and (max-width: 400px) {
+  .header_bottom .title {
+    padding-top: 120px;
   }
 }
 footer {
@@ -645,7 +656,7 @@ iframe {
 .background_back {
   position: fixed;
   top: 0;
-  z-index: 4;
+  z-index: 998;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.82);
@@ -656,7 +667,7 @@ iframe {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 5;
+  z-index: 999;
   border-radius: 5px;
   width: 95%;
   max-height: 100%;

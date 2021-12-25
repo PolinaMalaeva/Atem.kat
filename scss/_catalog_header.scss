@@ -3,15 +3,15 @@ header {
 }
 
 .header_top {
-  background: rgba(145, 143, 143, 0.52);
+  background: rgba(232, 229, 229, 0.73);
 }
 
 .header_bottom {
 
   .title {
     width: max-content;
-    padding: 0;
-    margin: 80px auto;
+    padding-top: 150px;
+    margin: 0 auto 80px;
   }
 }
 
@@ -51,7 +51,8 @@ header {
 @media all and (max-width: 600px) {
 
   .header_bottom .title {
-    margin: 50px auto;
+    margin-bottom: 60px;
+    padding-top: 145px;
   }
 
   .menu .flex div {
@@ -63,5 +64,12 @@ header {
     a {
       font-size: 16px;
     }
+  }
+}
+
+@media all and (max-width: 400px) {
+
+  .header_bottom .title {
+    padding-top: 120px;
   }
 }

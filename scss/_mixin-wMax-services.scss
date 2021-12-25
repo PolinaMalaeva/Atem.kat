@@ -1,57 +1,63 @@
 @mixin wMax_1300-300 {
-  @for $width from 1300 through 300 {
-    @if ($width < 1300 and $width > 800) {
-      @media all and (max-width: #{$width}px) {
 
-        main .catalog {
-          grid-auto-rows: calc(#{$width}px * 0.23);
-        }
+  $width: 1300;
+  @while $width <= 1300 and $width >= 940 {
+    @media all and (max-width: #{$width}px) {
+      main .catalog {
+        grid-template-columns: repeat(4, calc(#{$width}px * 0.21));
+        grid-auto-rows: calc(#{$width}px * 0.21);
       }
-    } @else if ($width < 800 and $width > 500) {
-      @media all and (max-width: #{$width}px) {
+    }
+    $width: $width - 120;
+  }
 
-        main .catalog {
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-template-areas:
-            "kamado shikamaru naruto"
-            "obito_2 shikamaru itadori"
-            "obito_2 satoru satoru"
-            "stich squid_game naruto_2"
-            "darling darling obito"
-            "hinata . .";
-          grid-auto-rows: calc(#{$width}px * 0.31);
-          gap: 5px;
+  $width: 845;
+  @while $width <= 845 and $width >= 615 {
+    @media all and (max-width: #{$width}px) {
+      main .catalog {
+        grid-template-columns: repeat(3, calc(#{$width}px * 0.27));
+        grid-template-areas:
+                    "kamado shikamaru naruto"
+                    "obito_2 shikamaru itadori"
+                    "obito_2 satoru satoru"
+                    "stich squid_game naruto_2"
+                    "darling darling obito"
+                    "hinata . .";
+        grid-auto-rows: calc(#{$width}px * 0.27);
+        gap: 5px;
+      }
+    }
+    $width: $width - 115;
+  }
+
+  $width: 520;
+  @while $width <= 520 and $width > 300 {
+    @media all and (max-width: #{$width}px) {
+      main .catalog {
+        grid-template-columns: repeat(2, calc(#{$width}px * 0.43));
+        grid-template-areas:
+                    "kamado shikamaru"
+                    "obito_2 shikamaru"
+                    "satoru satoru"
+                    "stich squid_game"
+                    "darling darling"
+                    "hinata naruto"
+                    "itadori obito"
+                    "naruto_2 naruto_2";
+        grid-auto-rows: calc(#{$width}px * 0.43);
+        gap: 5px;
+
+        div {
+          overflow: hidden;
         }
 
-      }
-    } @else if ($width < 500) {
-      @media all and (max-width: #{$width}px) {
-
-        main .catalog {
-          grid-template-columns: 1fr 1fr;
-          grid-template-areas:
-            "kamado shikamaru"
-            "obito_2 shikamaru"
-            "satoru satoru"
-            "stich squid_game"
-            "darling darling"
-            "hinata naruto"
-            "itadori obito"
-            "naruto_2 naruto_2";
-          grid-auto-rows: calc(#{$width}px * 0.46);
-          gap: 5px;
-
-          div {
-            overflow: hidden;
-          }
-
-          .naruto_2 img {
-            margin-top: 35px;
-            transform: scaleY(2);
-          }
+        .naruto_2 img {
+          margin-top: 35px;
+          transform: scaleY(2);
         }
       }
     }
+    $width: $width - 50;
   }
 }
 

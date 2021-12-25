@@ -6,9 +6,13 @@
 }
 
 .header_top {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
   padding: 10px 10px 0 10px;
-  background: rgba(201, 196, 196, 0.5);
-  border-bottom: 1px solid #949191;
+  background: rgba(201, 196, 196, 0.75);
+  border-bottom: 1px solid #807e7e;
 }
 
 .flex {
@@ -24,6 +28,7 @@
   height: 82px;
 
   svg {
+    fill: $color_text;
     width: 100%;
     height: 100%;
     transition: 300ms;
